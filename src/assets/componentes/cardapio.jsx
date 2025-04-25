@@ -3,7 +3,7 @@ import React from "react";
 const itens = [
 
     { Nome: "Gelado de Maracujá", Preco: 75.0, imagem: "/public/imagens/maracuja.jpg" },
-    { Nome: "Banoffe", Preco: 60.0, imagem: "./public/imagens/banoffe.jpg" },
+    { Nome: "Banoffe", Preco: 60.0, imagem: "/public/imagens/banoffe.jpg" },
     { Nome: "Cheesecake", Preco: 85.0, imagem: "/public/imagens/che.jpg" },
     { Nome: "Delícia de abacaxi", Preco: 75.0, imagem: "/public/imagens/Delicia de abacaxi.jpg" },
     { Nome: "Brownie", Preco: 55.0, imagem: "/public/imagens/novobro.jpg" },

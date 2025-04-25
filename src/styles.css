@@ -1,61 +1,65 @@
-/* Estilos gerais */
+/* Estilizando o fundo da página */
 body {
-    font-family: Arial, sans-serif;
-    background-image: url('imagens/4.jpg');
+
+    background-image: url('../public/imagens/4.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-   /* overflow: hidden;*/ /* Evitar rolagem na página */
-    
-}
-
-/* Fundo gradiente de vermelho para preto (da esquerda superior para a direita inferior) */
-.gradient-background {
-    background: linear-gradient(to bottom right, red, black);
-    padding: 0;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-/* Container principal */
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 10px; /* Diminuir o espaçamento interno */
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-/* Ícones das redes sociais */
-.social-icons {
+    padding: 0;    
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
     display: flex;
     justify-content: center;
-    background-color: black;
-    padding: 10px 0;
-    margin-bottom: 10px; /* Reduzir o espaço entre os ícones e o próximo conteúdo */
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Área dos ícones das redes sociais */
+.social-icons {
+    width: 101%;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
 }
 
 .social-icons a {
     color: white;
-    margin: 0 20px;
-    font-size: 24px;
+    font-size: 20px;
+    margin: 0 10px;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
-/* Efeito hover nos ícones das redes sociais */
 .social-icons a:hover {
-    color: orange; /* Muda a cor para laranja quando o mouse passa sobre os ícones */
+    color: #ba2d11;
+}
+
+/* Container principal */
+.container {
+    max-width: 1500px;
+    width: 99%;
+    margin: 0px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Título do Cardápio */
+.cardapio-titulo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    transition: color 0.3s;
+    margin-bottom: 15px;
 }
 
 .logo {
@@ -77,103 +81,124 @@ body {
 
 }
 
-/* Cardápio */
+.cardapio-titulo:hover {
+    color: #ff6600;
+}
+
+/* Layout do conteúdo principal */
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Layout do cardápio dividido em duas colunas */
 .menu-container {
+    width: 65%;
     display: grid;
-    grid-template-columns: repeat(4,4fr);
-    gap: 70px;
-    /*display: flex;
-    flex-direction: column*/
-    align-items: center;
-    background-color: rgb(255, 255, 255); /* Transparência */
-    border-radius: 8px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    background: #ffffff;
     padding: 15px;
-    box-shadow: 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 10px; /* Diminuir espaço entre o cardápio e o resumo */
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
 }
 
-/* Item de cardápio */
 .menu-item {
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 5px 0; /* Diminuir o espaçamento entre os itens */
-    width: 100%;
-}
-
-.item-info {
-    justify-content: space-between;
-    align-items: center;
-}
-
-.item-info input {
-    width: 60px;
-    padding: 5px;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     font-size: 14px;
+    text-align: center;
+    gap: 4px; /* adiciona espaçamento pequeno entre os elementos internos */
 }
 
-.menu-item img {
+.menu-img {
     width: 150px;
     height: 150px;
     object-fit: cover;
     border-radius: 5px;
     margin-left: 10px;
+    margin: 0; /* remove a margem inferior */
 }
 
-/* Botão */
-button {
-    background-color: #28a745;
+.menu-preco {
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 5px;
+}
+
+/* Resumo do Pedido */
+.order-summary {
+    width: 30%;
+    padding: 20px;
+    background: #fce8e8;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.order-summary h2 {
+    color: #a71414;
+    font-size: 20px;
+}
+
+.pedido-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.pedido-nome {
+    font-weight: bold;
+}
+
+.pedido-preco {
+    color: #a71414;
+}
+
+#finalizarPedido {
+    background-color: #a71414;
     color: white;
-    padding: 10px 20px;
+    font-size: 18px;
+    padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px; /* Diminuir espaço entre o botão e os itens */
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-/* Resumo do pedido */
-.order-summary {
-    background-color: rgba(234, 241, 230, 0.8); /* Transparência */
-    padding: 20px;
+    transition: background 0.3s;
     margin-top: 10px;
-    border: 2px solid #c1d7c4;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 600px;
-    text-align: center;
-    margin-bottom: 10px; /* Diminuir o espaço entre o resumo e o footer */
-    margin-left: auto;
-    margin-right: auto; /* Garantir que fique centralizado */
 }
 
-/* Alinha o resumo do pedido com o tamanho da div do cardápio */
-#resumoPedido {
-    margin-top: 10px;
-    font-size: 16px;
+
+#finalizarPedido:hover {
+    background-color: #ed4b4b;
 }
 
-/* Footer */
+#limparPedido {
+  background-color:  #a71414;
+  color: white;
+  font-size: 18px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+#limparPedido:hover {
+  background-color: #ed4b4b;
+}
+
+
+
+/* Rodapé */
 footer {
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-    font-size: 10px;
+    margin-top: 30px;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px; /* Ajuste o espaçamento entre o conteúdo e o footer */
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
+    font-size: 14px;
+    color: #ffffff;
 }
