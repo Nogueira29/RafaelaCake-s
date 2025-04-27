@@ -56,13 +56,13 @@ function App() {
       </div>
       
       <div class= "titcardapio">    
-            <img class='logo' src="../imagens/logo2.png" alt=""/>
+            <img class='logo' src="../public/imagens/logo2.png" alt="logo"/>
       </div>
 
       <div className="container">
             <div className="conteudo">
           <Menu
-            pedido={pedido}
+            pedido={pedido} 
             onQuantidadeChange={handleQuantidadeChange}
           />
 
