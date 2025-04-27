@@ -29,7 +29,7 @@ function App() {
     if (!window.confirm("Tem certeza que seu pedido está completo?")) return;
 
     // Monta mensagem com quebras de linha reais
-    let msg = "Olá, seu pedido foi confirmado. Obrigado por escolher a Lanchonete do Tony!\n\n";
+    let msg = "Olá, seu pedido foi confirmado. Obrigado por escolher a Rafaela Cake's!\n\n";
     Object.entries(pedido).forEach(([key, { preco, quantidade }]) => {
       const nomeFormatado = key
         .replace(/([A-Z])/g, " $1")
@@ -56,7 +56,7 @@ function App() {
       </div>
       
       <div class= "titcardapio">    
-            <img class='logo' src="../public/imagens/logo2.png" alt="logo"/>
+            <img class='logo' src="./public/imagens/logo2.png" alt="logo"/>
       </div>
 
       <div className="container">
