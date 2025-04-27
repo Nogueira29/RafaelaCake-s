@@ -10,6 +10,7 @@ const precos = {
   BoxBrownie: 55.0,
   Docinhos: 20.0,
   DocinhosEmArvore: 25.0,
+  PresenteDocinho: 5.0,
 };
 
 function Menu({ pedido, onQuantidadeChange }) {

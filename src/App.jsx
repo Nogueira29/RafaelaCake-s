@@ -95,10 +95,12 @@ function App() {
               >
                 Limpar Pedido
               </button>
+         
             </div>
           </div>
         </div>
       </div>
+      
       <div>
         <footer>
         <p>Desenvolvido por <a href="https://github.com/Nogueira29" target="_blank">Robson Nogueira</a>, no Curso de Programador FrontEnd do Senai (2025) Todos os direitos reservados</p>
