@@ -56,7 +56,7 @@ function App() {
       </div>
       
       <div class= "titcardapio">    
-            <img class='logo' src="./public/imagens/logo2.png" alt="logo"/>
+            <img class='logo' src="/public/imagens/logo2.png" alt="logo"/>
       </div>
 
       <div className="container">
